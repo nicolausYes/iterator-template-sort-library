@@ -17,6 +17,7 @@ It also contains
 Structure
 -----
 Every sort-class contains two functions, that have the same structure as std::sort in STL
+
         template< class RandomAccessIterator >
         static void sort( RandomAccessIterator first, RandomAccessIterator last );
         
