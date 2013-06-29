@@ -1,8 +1,6 @@
 #pragma once
 
 #include <algorithm>    // std::swap
-#include <iterator>
-#include <typeinfo>  
 
 namespace sortings
 {

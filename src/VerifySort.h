@@ -13,8 +13,9 @@ public:
 
 	VerifySort(size_t dataSize)
 	{
-		std::default_random_engine generator;
 		_data.resize( dataSize );
+
+		std::default_random_engine generator;
 		std::generate( _data.begin(), _data.end(), generator );
 		std::random_shuffle( _data.begin(), _data.end() );	
 	}
@@ -22,14 +23,10 @@ public:
 	bool verify( sort_function sort )
 	{
 		std::vector< Type > tmpData( _data.size() );
-		auto copyToTmpContainer = [&] () { std::copy( _data.begin(), _data.end(), tmpData.begin() ); };
-
-		copyToTmpContainer();
+		
+		std::copy( _data.begin(), _data.end(), tmpData.begin() );
 		sort( tmpData.begin(), tmpData.end() );
-		if( !std::is_sorted( tmpData.begin(), tmpData.end() ) )
-			return false;
-
-		return true;
+		return std::is_sorted( tmpData.begin(), tmpData.end() );
 	}	
 
 private:

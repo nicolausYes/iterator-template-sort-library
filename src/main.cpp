@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 
 #include "BubbleSort.h"
 #include "SelectionSort.h"
@@ -7,6 +6,7 @@
 #include "ShellSort.h"
 #include "MergeSort.h"
 #include "MergeSortBottomUp.h"
+#include "QuickSort.h"
 
 #include "VerifySort.h"
 #include "Benchmark.h"
@@ -24,6 +24,7 @@ int main()
 	std::cout << "ShellSort... " << ( sortVerifier.verify( sortings::ShellSort::sort ) ? "OK" : "FAILED" ) << std::endl;
 	std::cout << "MergeSort... " << ( sortVerifier.verify( sortings::MergeSort::sort ) ? "OK" : "FAILED" ) << std::endl;
 	std::cout << "MergeSortBottomUp... " << ( sortVerifier.verify( sortings::MergeSortBottomUp::sort ) ? "OK" : "FAILED" ) << std::endl;
+	std::cout << "QuickSort... " << ( sortVerifier.verify( sortings::QuickSort::sort ) ? "OK" : "FAILED" ) << std::endl;
 	std::cout << std::endl << std::endl;
 	
 	// Test sort time
@@ -36,6 +37,10 @@ int main()
 	std::cout << "ShellSort = " << Benchmark::benchmark( sortings::ShellSort::sort, dataSize, sortsCount ) << "ms" << std::endl;
 	std::cout << "MergeSort = " << Benchmark::benchmark( sortings::MergeSort::sort, dataSize, sortsCount ) << "ms" << std::endl;
 	std::cout << "MergeSortBottomUp = " << Benchmark::benchmark( sortings::MergeSortBottomUp::sort, dataSize, sortsCount ) << "ms" << std::endl;
+	std::cout << "QuickSort = " << Benchmark::benchmark( sortings::QuickSort::sort, dataSize, sortsCount ) << "ms" << std::endl;
+
+	std::cout << "std::sort = " << Benchmark::benchmark( std::sort, dataSize, sortsCount ) << "ms" << std::endl;
+	std::cout << "std::stable_sort = " << Benchmark::benchmark( std::stable_sort, dataSize, sortsCount ) << "ms" << std::endl;
 
 	return 0;
 }
