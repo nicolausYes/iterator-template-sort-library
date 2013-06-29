@@ -44,14 +44,10 @@ namespace sortings
 			while( true )
 			{
 				while( comp( first[++i], first[lo] ) )
-				{
 					if( i == hi )	break;
-				}
 
 				while( comp( first[lo], first[--j] ) )
-				{
 					if( j == lo )	break;
-				}
 
 				if( i >= j )
 					break;

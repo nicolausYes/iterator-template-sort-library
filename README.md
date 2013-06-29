@@ -20,7 +20,7 @@ Both classes supports STL sorting algorithms.
 
 Structure
 -----
-Every sort algorithm implemented as class with two static template functions, that have the same structure as std::sort in STL.
+Every sort algorithm implemented as class with two static template functions, that have the same structure as std::sort in STL:
 
 	template< class RandomAccessIterator >
 	static void sort( RandomAccessIterator first, RandomAccessIterator last );
