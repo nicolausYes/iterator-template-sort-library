@@ -72,7 +72,7 @@ Some theory
 -------
 Big-O sorting algorithms complexities.
 
-![C++sorting-library](https://dl.dropboxusercontent.com/u/20468014/sorts.jpg "C++sorting-library")
+![C++sorting-library](https://dl.dropboxusercontent.com/u/20468014/sort_library/sorts.jpg "C++sorting-library")
 
 Tests
 -------
@@ -86,12 +86,12 @@ RAM 8Gb, 1033<br/>
 
 It is also need to be mentioned that on RAM 1333 or faster MergeSort performs much better (because of faster copy).
 
-All tests were launched 50-1000 times for every algorithm. Test results (<b>clickable</b>) with avarage time in milliseconds:
+All tests were launched 50-1000 times for every algorithm. Test results (<b>clickable</b>) with avarage time in milliseconds ([link to html version of table](https://dl.dropboxusercontent.com/u/20468014/sort_library/sorts_comp.html)):
 
-![C++sorting-library](https://dl.dropboxusercontent.com/u/20468014/sorts_comp.jpg "C++sorting-library")
+![C++sorting-library](https://dl.dropboxusercontent.com/u/20468014/sort_library/sorts_comp.jpg "C++sorting-library")
 
 Battle of the most efficient algorithms on large amounts of data:
-![C++sorting-library](https://dl.dropboxusercontent.com/u/20468014/sorts_eff.jpg "C++sorting-library")
+![C++sorting-library](https://dl.dropboxusercontent.com/u/20468014/sort_library/sorts_eff.jpg "C++sorting-library")
 
 As you see, implemented algorithms performs better than STL analogs on large amounts of data.
 
